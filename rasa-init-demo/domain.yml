@@ -1,0 +1,87 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_great_and_you
+  - mood_unhappy
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Hey! How are feeling today?"
+
+  utter_happy:
+  - text: "I'm so glad to hear that you are feeling good today!"
+  - text: "Nice! I'm so happy to hear you are good."
+
+  utter_mood_great_and_you:
+  - text: "I feel good, thanks! I'm so glad to hear that you are feeling good today!"
+  - text: "I'm fine. Thanks! I'm so happy to hear you are good."
+
+  utter_okay:
+  - text: "Okay."
+
+  utter_bad:
+  - text: "I'm really sorry to hear that you're going through a bad time. But don't worry. Things will turn out bright again in the future."
+
+  utter_ask_for_conversation:
+  - text: "I've just noticed that today your sweat level is a bit higher than usual. May I ask you, if you feel comfortable to talk a few words about your health today? As I really care about you, I would love to hear how things are going."
+  
+  utter_thanks_for_trust:
+  - text: "I'm glad to hear that you are open to talk! Thanks a lot for your trust!"
+
+  utter_ask_if_pain:
+  - text: "Can I ask you, if you had any pain issues during the day?"
+
+  utter_ask_if_pain_interfearing:
+  - text: "I'm sorry to hear that. May I ask, if the pain was interfearing with any of your daily activities during the last week?"
+
+  utter_ask_if_pain_at_arm_or_shoulders:
+  - text: "Did you feel any pain at your arms or your shoulders?"
+
+  utter_ask_if_pain_at_breast:
+  - text: "Was there any pain at the area of your effected breast?"
+
+  utter_ask_if_pain_at_joints:
+  - text: "Was there any pain at your affected breast?"
+
+  utter_ask_for_hobbies:
+  - text: "In terms of your hobbies, do you still feel passionate about the hobbies you used to have before your illness started to occur? Is there still enough energy for you to follow these hobbies?"
+
+  utter_ask_for_sleep:
+  - text: "If I'm allowed to ask - I've noticed that you have slept less during the past week. Is there something in your mind that bothers you?"
+
+  utter_ask_for_anxiety:
+  - text: "If it is still in your comfort zone, would you like to tell me what kind of feelings you had. Was it a feeling of anxiety, depression?"
+
+  utter_ask_for_financial_issues:
+  - text: "May it be that your physical condition or medical treatment has caused some financial issues?"
+
+  utter_ask_for_body_perception:
+  - text: "If you look into your mirror, do you feel any dissatisfaction about what you see?"
+  
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_understanding:
+  - text: "O, I understand. Thanks for telling me."
+  - text: "I see. I'm glad you share this with me."
+  - text: "I got it. It's good that you told me."
+
+  utter_relieve:
+  - text: "I'm relieved to hear that."
+  - text: "I'm glad to hear this answer from you."
+  - text: "I'm glad to know, that this isn't the case."
+  - text: "Great! So no problems about that."
+  - text: "Good to hear you are fine though."
+
+  utter_goodbye:
+  - text: "Thanks a lot for your trust and having this conversation with me. To give you some time to rest, I'll leave you alone now. Just remember that you can call me anytime you need me. I hope to hear from you again and wish you all the best!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

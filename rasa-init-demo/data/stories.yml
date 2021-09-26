@@ -1,0 +1,111 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_ask_for_conversation
+
+- story: catch up conversation
+  steps:
+  - action: utter_ask_for_conversation
+  - intent: affirm
+  - action: utter_thanks_for_trust
+  - action: utter_ask_if_pain
+
+
+- story: pain question pos path
+  steps:
+  - action: utter_ask_if_pain
+  - intent: deny
+  - action: utter_relieve
+  - action: utter_ask_for_hobbies
+
+- story: pain question neg path
+  steps:
+  - action: utter_ask_if_pain
+  - intent: affirm
+  - action: utter_understanding
+  - action: utter_ask_for_hobbies
+
+- story: hobby question pos path
+  steps:
+  - action: utter_ask_for_hobbies
+  - intent: affirm
+  - action: utter_relieve
+  - action: utter_ask_for_sleep
+
+- story: hobby question neg path
+  steps:
+  - action: utter_ask_for_hobbies
+  - intent: deny
+  - action: utter_understanding
+  - action: utter_ask_for_sleep
+
+- story: sleep question pos path
+  steps:
+  - action: utter_ask_for_sleep
+  - intent: deny
+  - action: utter_relieve
+  - action: utter_ask_for_anxiety
+  - intent: deny
+  - action: utter_relieve
+  - action: utter_ask_for_anxiety
+  - intent: deny
+  - action: utter_ask_for_body_perception
+  - intent: deny
+  - action: utter_relieve
+  - action: utter_goodbye
+
+- story: sleep question neg path
+  steps:
+  - action: utter_ask_for_sleep
+  - intent: affirm
+  - action: utter_understanding
+  - action: utter_ask_for_anxiety
+  - intent: deny
+  - action: utter_relieve
+  - action: utter_ask_for_anxiety
+  - intent: deny
+  - action: utter_ask_for_body_perception
+  - intent: deny
+  - action: utter_relieve
+  - action: utter_goodbye
+
+- story: anxiety question neg path
+  steps:
+  - action: utter_ask_for_anxiety
+  - intent: deny
+  - action: utter_relieve
+  - action: utter_ask_for_body_perception
+  - intent: deny
+  - action: utter_relieve
+  - action: utter_goodbye
+
+- story: anxiety question neg path
+  steps:
+  - action: utter_ask_for_anxiety
+  - intent: affirm
+  - action: utter_understanding
+  - action: utter_ask_for_body_perception
+  - intent: deny
+  - action: utter_relieve
+  - action: utter_goodbye
+
+- story: body perception question pos path
+  steps:
+  - action: utter_ask_for_body_perception
+  - intent: deny
+  - action: utter_relieve
+  - action: utter_goodbye
+
+- story: body perception question neg path
+  steps:
+  - action: utter_ask_for_body_perception
+  - intent: affirm
+  - action: utter_understanding
+  - action: utter_goodbye
